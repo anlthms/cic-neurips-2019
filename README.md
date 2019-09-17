@@ -6,7 +6,7 @@ This repository has code for training a classification model for the [Cellular I
 The main additions are:
 
 * Make use of the negative control image. The image to be classified as well as its negative control are passed through ResNet. The features thus obtained are combined (by subtraction) and used for classification.
-
+```
                           ________
                           |      |
               image ----> |resnet|  \
@@ -22,5 +22,5 @@ The main additions are:
                           |      |
     negative control ---> |resnet|
                           ________
-
+```
 * Train the model on random 384x384 crops. Inference is done using a center crop of the same size.
